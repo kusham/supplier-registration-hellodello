@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Imbue:opsz@10..100&display=swap");
+
+.IntroVideo-content {
+  margin-top: 50px;
+}
+.IntroVideo-title {
+  display: flex;
+  justify-content: center;
+}
+.IntroVideo-title h1 {
+  font-family: "Imbue", serif;
+  font-size: 56px;
+}
+.IntroVideo-video {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.IntroVideo-video video {
+  max-width: 1000px;
+}
