@@ -1,0 +1,39 @@
+.ImageSlideShow-slide {
+    height: auto;
+}
+.ImageSlideShow-slide img{
+    height: auto;
+    object-fit: contain;
+}
+
+@media screen and (min-width: 868px) {
+    .ImageSlideShow-slide {
+        height: 32rem;
+    }
+   
+  }
+.carousel-item {
+    background-color: aqua;
+}
+
+.Navbar-carousel-indicators {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+.carousel-control-next-icon {
+    /* background-color: black; */
+    height: 50px;
+    width: 50px;
+    /* border-radius: 50%;
+    padding: 10px; */
+} 
+
+.carousel-control-prev-icon {
+    /* background-color: black; */
+    height: 50px;
+    width: 50px;
+    /* border-radius: 50%;
+    padding: 10px; */
+}
