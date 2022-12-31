@@ -1,0 +1,8 @@
+.Footer-container {
+    height: 400px;
+    background-color: rgb(143, 142, 142);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
