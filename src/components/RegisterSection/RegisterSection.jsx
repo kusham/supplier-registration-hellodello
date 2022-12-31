@@ -2,9 +2,7 @@ import React from "react";
 import "./RegisterSectionStyle.css";
 import twoGirls from "../../Resources/Images/two-girls.png";
 
-
-const RegisterSection = () => {
-
+const RegisterSection = ({ setOpenRegistration }) => {
   return (
     <div>
       <div className="container mt-5">
@@ -27,7 +25,11 @@ const RegisterSection = () => {
             <p data-aos="fade-left" data-aos-duration="2000">
               Let’s build something special !
             </p>
-            <button data-aos="fade-left" data-aos-duration="3000">
+            <button
+              onClick={() => setOpenRegistration(true)}
+              data-aos="fade-left"
+              data-aos-duration="3000"
+            >
               ENROLL
             </button>
           </div>
