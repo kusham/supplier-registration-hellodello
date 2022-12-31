@@ -1,10 +1,15 @@
 .ImageSlideShow-slide {
     height: auto;
+    /* width: 100%; */
 }
 .ImageSlideShow-slide img{
     height: auto;
     object-fit: contain;
 }
+
+/* .ImageSlideShow-slide h1,p{
+    color: black;
+} */
 
 @media screen and (min-width: 868px) {
     .ImageSlideShow-slide {
