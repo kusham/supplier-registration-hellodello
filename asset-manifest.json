@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/supplier-registration-hellodello/static/css/main.350d198f.css",
+    "main.js": "/supplier-registration-hellodello/static/js/main.2eb05bf8.js",
+    "static/media/introduction.mp4": "/supplier-registration-hellodello/static/media/introduction.64d946c19add968a5a6e.mp4",
+    "static/media/2.png": "/supplier-registration-hellodello/static/media/2.dc38bcf01a44a1e609bf.png",
+    "static/media/HelloDello-logo.png": "/supplier-registration-hellodello/static/media/HelloDello-logo.fd30629c084e993ce7fe.png",
+    "static/media/1.png": "/supplier-registration-hellodello/static/media/1.182bb393733d9dd1750b.png",
+    "static/media/3.png": "/supplier-registration-hellodello/static/media/3.ea09c589539535f65ae5.png",
+    "static/media/two-girls.png": "/supplier-registration-hellodello/static/media/two-girls.99bd3eb93c7f575ed7e4.png",
+    "static/media/5.jpg": "/supplier-registration-hellodello/static/media/5.ebf3c0a8e66d4b09468a.jpg",
+    "index.html": "/supplier-registration-hellodello/index.html",
+    "main.350d198f.css.map": "/supplier-registration-hellodello/static/css/main.350d198f.css.map",
+    "main.2eb05bf8.js.map": "/supplier-registration-hellodello/static/js/main.2eb05bf8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.350d198f.css",
+    "static/js/main.2eb05bf8.js"
+  ]
+}
