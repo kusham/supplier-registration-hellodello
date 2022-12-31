@@ -1,5 +1,6 @@
 import './App.css'
 import CompanyFeatures from './components/CompanyFeatures/CompanyFeatures';
+import Footer from './components/Footer/Footer';
 import ImageSlideShow from './components/ImageSlideShow/ImageSlideShow';
 import IntroVideo from './components/IntroVideo/IntroVideo';
 import Navbar from './components/Navbar/Navbar';
@@ -13,6 +14,7 @@ function App() {
       <IntroVideo />
       <RegisterSection />
       <CompanyFeatures />
+      <Footer />
     </div>
   );
 }
