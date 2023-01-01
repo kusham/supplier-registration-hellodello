@@ -12,12 +12,12 @@ function App() {
   const [openRegistration, setOpenRegistration] = useState(false)
   return (
     <div >
-      <Navbar />
+      {/* <Navbar />
       <ImageSlideShow />
       <IntroVideo />
       <RegisterSection setOpenRegistration={setOpenRegistration}/>
       <RegisterForm openRegistration={openRegistration} setOpenRegistration={setOpenRegistration}/>
-      <CompanyFeatures />
+      <CompanyFeatures /> */}
       <Footer />
     </div>
   );
