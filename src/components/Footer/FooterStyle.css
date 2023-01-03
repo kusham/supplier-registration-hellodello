@@ -75,3 +75,7 @@
 .footer-aboutUs {
   padding-right: 40px;
 }
+
+.footer-aboutUs p{
+  text-align: justify;
+}
