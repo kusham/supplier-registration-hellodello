@@ -5,7 +5,7 @@ import Footer from './components/Footer/Footer';
 import ImageSlideShow from './components/ImageSlideShow/ImageSlideShow';
 import IntroVideo from './components/IntroVideo/IntroVideo';
 import Navbar from './components/Navbar/Navbar';
-import RegisterForm from './components/RegisterForm/RegisterForm';
+import RegisterModal from './components/RegisterModal/RegisterModal';
 import RegisterSection from './components/RegisterSection/RegisterSection';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
       <ImageSlideShow />
       <IntroVideo />
       <RegisterSection setOpenRegistration={setOpenRegistration}/>
-      <RegisterForm openRegistration={openRegistration} setOpenRegistration={setOpenRegistration}/>
+      <RegisterModal openRegistration={openRegistration} setOpenRegistration={setOpenRegistration}/>
       <CompanyFeatures />
       <Footer />
     </div>
