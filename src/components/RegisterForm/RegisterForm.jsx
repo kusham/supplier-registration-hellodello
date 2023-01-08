@@ -1,24 +1,9 @@
-import React from 'react';
-import { Modal } from '@mantine/core';
-
-const RegisterForm = ({openRegistration, setOpenRegistration}) => {
-    
+import React from 'react'
+import './RegisterFormStyle.css'
+const RegisterForm = () => {
   return (
-    
-    <Modal
-    opened={openRegistration}
-    onClose={() => setOpenRegistration(false)}
-    transition="scale"
-    transitionDuration={1600}
-    transitionTimingFunction="ease"
-    title="Supplier Registration !"
-    fullScreen
-  >
-    {/* Modal content */}
-  </Modal>
-        
+    <div className='RegisterForm-container'>RegisterForm</div>
   )
 }
 
 export default RegisterForm
-
