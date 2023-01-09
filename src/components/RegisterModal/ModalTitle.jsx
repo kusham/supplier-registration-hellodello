@@ -5,7 +5,7 @@ const ModalTitle = () => {
   return (
     <div className="ModalTitle-container">
       <img className="Navbar-logo" src={logo} alt="HelloDello-logo" />
-      <h1>Sell With HelloDello</h1>
+      <h2>Sell With HelloDello</h2>
     </div>
   );
 };

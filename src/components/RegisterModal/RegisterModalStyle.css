@@ -1,3 +1,11 @@
+.RegisterModal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: yellow; */
+    height: 87vh;
+
+}
 .ModalTitle-container {
     display: flex;
     gap:1rem
