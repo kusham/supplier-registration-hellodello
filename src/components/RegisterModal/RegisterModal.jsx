@@ -1,6 +1,6 @@
 import React from 'react';
 import { Modal } from '@mantine/core';
-import './RegisterFormStyle.css'
+import './RegisterModalStyle.css'
 import RegisterForm from '../RegisterForm/RegisterForm';
 import ModalTitle from './ModalTitle';
 
@@ -17,7 +17,7 @@ const RegisterModal = ({openRegistration, setOpenRegistration}) => {
     fullScreen
     title={<ModalTitle />}
   >
-<div className=''>
+<div className='RegisterModal-container'>
   <RegisterForm />
 </div>
   </Modal>
