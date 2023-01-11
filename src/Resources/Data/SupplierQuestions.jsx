@@ -11,7 +11,7 @@ export const questions = [
       placeholder: "Your email",
       InputName: "email",
       image: image1,
-      icon: <i class="fa-solid fa-at"></i>,
+      icon: <i className="fa-solid fa-at"></i>,
       required: true,
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eveniet eius vero accusamus expedita eaque labore non ad excepturi! Eius",
@@ -41,7 +41,7 @@ export const questions = [
       placeholder: "Select year",
       InputName: "establishmentYear",
       image: image3,
-      icon: <i class="fa fa-calendar-days"></i>,
+      icon: <i className="fa fa-calendar-days"></i>,
       required: true,
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eveniet eius vero accusamus expedita eaque labore non ad excepturi! Eius",
@@ -55,7 +55,7 @@ export const questions = [
       placeholder: "Select Category",
       InputName: "productCategory",
       image: image4,
-      icon: <i class="fa fa-check-double"></i>,
+      icon: <i className="fa fa-check-double"></i>,
       required: true,
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eveniet eius vero accusamus expedita eaque labore non ad excepturi! Eius",
@@ -69,7 +69,7 @@ export const questions = [
       placeholder: "website (if Available)",
       InputName: "websiteLink",
       image: image1,
-      icon: <i class="fa fa-link"></i>,
+      icon: <i className="fa fa-link"></i>,
       required: false,
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eveniet eius vero accusamus expedita eaque labore non ad excepturi! Eius",
@@ -97,7 +97,7 @@ export const questions = [
       placeholder: "Enter your revenue",
       InputName: "approximateRevenue",
       image: image3,
-      icon: <i class="fa fa-sack-dollar"></i>,
+      icon: <i className="fa fa-sack-dollar"></i>,
       required: true,
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eveniet eius vero accusamus expedita eaque labore non ad excepturi! Eius",
@@ -111,7 +111,7 @@ export const questions = [
       placeholder: "Enter Links",
       InputName: "linksOfTopSellingProducts",
       image: image4,
-      icon: <i class="fa fa-link"></i>,
+      icon: <i className="fa fa-link"></i>,
       required: false,
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eveniet eius vero accusamus expedita eaque labore non ad excepturi! Eius",
@@ -125,7 +125,7 @@ export const questions = [
       placeholder: "Enter store address (if Available)",
       InputName: "physicalLocations",
       image: image1,
-      icon: <i class="fa fa-location-dot"></i>,
+      icon: <i className="fa fa-location-dot"></i>,
       required: false,
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eveniet eius vero accusamus expedita eaque labore non ad excepturi! Eius",
@@ -139,7 +139,7 @@ export const questions = [
       placeholder: "Choose file",
       InputName: "brandPresentation",
       image: image2,
-      icon: <i class="fa fa-file-powerpoint"></i>,
+      icon: <i className="fa fa-file-powerpoint"></i>,
       required: false,
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eveniet eius vero accusamus expedita eaque labore non ad excepturi! Eius",
@@ -153,7 +153,7 @@ export const questions = [
       placeholder: "Choose files",
       InputName: "imagesOfStore",
       image: image3,
-      icon: <i class="fa fa-image"></i>,
+      icon: <i className="fa fa-image"></i>,
       required: false,
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eveniet eius vero accusamus expedita eaque labore non ad excepturi! Eius",
@@ -167,7 +167,7 @@ export const questions = [
       placeholder: "Enter Contact person's name",
       InputName: "contactPerson",
       image: image4,
-      icon: <i class="fa fa-address-book"></i>,
+      icon: <i className="fa fa-address-book"></i>,
       required: true,
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eveniet eius vero accusamus expedita eaque labore non ad excepturi! Eius",
@@ -181,7 +181,7 @@ export const questions = [
       placeholder: "Enter Contact Number",
       InputName: "contactNumber",
       image: image1,
-      icon: <i class="fa fa-phone-volume"></i>,
+      icon: <i className="fa fa-phone-volume"></i>,
       required: true,
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eveniet eius vero accusamus expedita eaque labore non ad excepturi! Eius",
@@ -195,7 +195,7 @@ export const questions = [
       placeholder: "Write Your message",
       InputName: "message",
       image: image2,
-      icon: <i class="fa fa-message"></i>,
+      icon: <i className="fa fa-message"></i>,
       required: false,
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eveniet eius vero accusamus expedita eaque labore non ad excepturi! Eius",
