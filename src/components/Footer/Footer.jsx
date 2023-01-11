@@ -17,10 +17,10 @@ const Footer = () => {
                 <img src={logo} alt="helloDello" />
               </div>
               <div className="col-sm-12 col-lg-8 footer-nav">
-                <a>Contact Us</a>
-                <a>Privacy Policy</a>
-                <a>Return & Exchange</a>
-                <a>Shipping & Delivery</a>
+                <p>Contact Us</p>
+                <p>Privacy Policy</p>
+                <p>Return & Exchange</p>
+                <p>Shipping & Delivery</p>
               </div>
             </div>
           </div>
