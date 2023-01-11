@@ -1,18 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Input } from "@mantine/core";
 import { Button } from "@mantine/core";
 
 const InputSection = ({
   section,
   sectionForward,
+  sectionBackward,
   handleSupplierData,
   supplierData,
 }) => {
-  const [show, setShow] = useState(false);
-  const [inputData, setInputData] = useState("");
-  const handleAnimation = () => {
-    setShow(!show);
-  };
+  // const [show, setShow] = useState(false);
+  // const [inputData, setInputData] = useState("");
+  // const handleAnimation = () => {
+  //   setShow(!show);
+  // };
 
   // console.log(supplierData[section.InputName]);
 
@@ -42,12 +43,12 @@ const InputSection = ({
       >
         <h6>{section?.label}</h6>
         <Input
-          icon={<i class="fa-solid fa-at"></i>}
+          icon={section?.icon}
           variant="unStyled"
           placeholder={section?.placeholder}
           onChange={handleSupplierData}
           name={section?.InputName}
-          // value={supplierData[section?.InputName || 'email']}
+          value={supplierData[section?.InputName || "email"]}
         />
       </div>
       <div
@@ -55,15 +56,38 @@ const InputSection = ({
         data-aos="fade-up"
         data-aos-duration="3000"
       >
-        <Button
-          color="dark"
-          radius="xl"
-          uppercase
-          // disabled={supplierData[section?.InputName || 'email'] ? false : true}
-          onClick={handleContinue}
-        >
-          Continue
-        </Button>
+        {section?.prevId ? (
+          <Button color="gray" radius="xl" uppercase onClick={sectionBackward}>
+            previous
+          </Button>
+        ) : (
+          <div></div>
+        )}
+
+        {section?.nextId ? (
+          <Button
+            color="dark"
+            radius="xl"
+            uppercase
+            disabled={
+              supplierData[section?.InputName || "email"] || !section?.required
+                ? false
+                : true
+            }
+            onClick={handleContinue}
+          >
+            Continue
+          </Button>
+        ) : (
+          <Button
+            color="green"
+            radius="xl"
+            uppercase
+            onClick={handleContinue}
+          >
+            Submit
+          </Button>
+        )}
       </div>
     </div>
   );
