@@ -8,18 +8,9 @@ const InputSection = ({
   sectionBackward,
   handleSupplierData,
   supplierData,
+  handleSubmit
 }) => {
-  // const [show, setShow] = useState(false);
-  // const [inputData, setInputData] = useState("");
-  // const handleAnimation = () => {
-  //   setShow(!show);
-  // };
 
-  // console.log(supplierData[section.InputName]);
-
-  const handleContinue = () => {
-    sectionForward();
-  };
   return (
     <div
       className="InputSection-container"
@@ -74,7 +65,7 @@ const InputSection = ({
                 ? false
                 : true
             }
-            onClick={handleContinue}
+            onClick={sectionForward}
           >
             Continue
           </Button>
@@ -83,7 +74,7 @@ const InputSection = ({
             color="green"
             radius="xl"
             uppercase
-            onClick={handleContinue}
+            onClick={handleSubmit}
           >
             Submit
           </Button>
