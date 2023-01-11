@@ -11,8 +11,9 @@ const ImageSlideShow = () => {
         data-ride="carousel"
       >
         <div className="carousel-inner">
-          {slideItem.map((slide) => (
+          {slideItem.map((slide, i) => (
             <div
+            key={i}
               className={
                 slide.active
                   ? "carousel-item ImageSlideShow-slide active"
