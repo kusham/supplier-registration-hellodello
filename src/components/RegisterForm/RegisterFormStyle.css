@@ -21,6 +21,8 @@
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(16, 47, 73);
 }
 .InputSection-description p{
 font-weight: 600;
