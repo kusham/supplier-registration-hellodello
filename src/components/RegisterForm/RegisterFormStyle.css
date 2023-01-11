@@ -30,7 +30,7 @@ color: rgb(0, 0, 0, 0.6);
 .InputSection-continue{
     display: flex;
     margin-top: 20px;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 
