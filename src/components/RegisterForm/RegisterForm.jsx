@@ -1,52 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 import "./RegisterFormStyle.css";
-import image1 from "../../Resources/Images/6.png";
+import { questions } from "../../Resources/Data/SupplierQuestions";
 import InputSection from "./InputSection";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
-const questions = [
-  {
-    id: 1,
-    title: "Welcome to HELLODELLO",
-    label: "Email:",
-    placeholder: "Your email",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eveniet eius vero accusamus expedita eaque labore non ad excepturi! Eius",
-  nextId: 2,
-    },
 
-    {
-      id: 2,
-      title: "Name of Your brand name",
-      label: "Brand name:",
-      placeholder: "Enter Your brand name",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eveniet eius vero accusamus expedita eaque labore non ad excepturi! Eius",
-    nextId: 3,
-      },
-
-      {
-        id: 3,
-        title: "company Establishment",
-        label: "Year of Establishment:",
-        placeholder: "Select year",
-        description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eveniet eius vero accusamus expedita eaque labore non ad excepturi! Eius",
-      nextId: 4,
-        },
-];
 
 const RegisterForm = () => {
+  const [section, setSection] = useState(questions[0]);
+  const [supplierData, setSupplierData] = useState({
+    brandName: "",
+    establishmentYear: "",
+    productCategory: "",
+    websiteLink: "",
+    portfolioSize: "",
+    approximateRevenue: "",
+    linksOfTopSellingProducts: "",
+    physicalShops: "",
+    brandPresentation: "",
+    imagesOfStore: "",
+    contactPerson: "",
+    email: "",
+    contactNumber: "",
+    message: "",
+  });
+  const sectionForward = () => {
+    setSection(questions[section.nextId - 1]);
+  };
+  console.log(section);
+
+  const handleSupplierData = (event) => {
+    setSupplierData({
+      ...supplierData,
+      [event.target.name]: event.target.value,
+    });
+  };
   return (
     <div className="RegisterForm-container container">
+          <TransitionGroup>
+            <CSSTransition key={section.id} timeout={1}>
       <div className="row">
-        <div className="col-6">
-          <img src={image1} alt="image1" />
+        <div className="col-6" data-aos="fade-down" data-aos-duration="2000">
+          <img src={section.image} alt="image1" />
         </div>
         <div className="col-6 RegisterForm-inputSection">
-          
-          <InputSection />
+              <InputSection
+                section={section}
+                sectionForward={sectionForward}
+                handleSupplierData={handleSupplierData}
+                supplierData={supplierData}
+              />
         </div>
       </div>
+            </CSSTransition>
+          </TransitionGroup>
     </div>
   );
 };

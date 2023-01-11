@@ -1,65 +1,71 @@
 import React, { useEffect, useState } from "react";
 import { Input } from "@mantine/core";
 import { Button } from "@mantine/core";
-import { motion } from "framer-motion";
 
-const InputSection = () => {
+const InputSection = ({
+  section,
+  sectionForward,
+  handleSupplierData,
+  supplierData,
+}) => {
   const [show, setShow] = useState(false);
+  const [inputData, setInputData] = useState("");
   const handleAnimation = () => {
     setShow(!show);
   };
 
-  useEffect(() => {
-    handleAnimation();
-  });
+  // console.log(supplierData[section.InputName]);
 
+  const handleContinue = () => {
+    sectionForward();
+  };
   return (
-    <motion.div
+    <div
       className="InputSection-container"
-    //   initial={{ opacity: 0, scale: 0 }}
-    //   animate={{ opacity: show ? 1 : 0, scale: show ? 1 : 0 }}
-    //   transition={{ duration: 2 }}
+      data-aos="fade-up"
+      data-aos-duration="1000"
     >
       <div className="InputSection-header">
-        <h1>Welcome to HEllODELLO !</h1>
+        <h1>{section?.title}</h1>
       </div>
       <div
         className="InputSection-description"
         data-aos="fade-up"
-        data-aos-duration="1000"
+        data-aos-duration="2000"
       >
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eveniet
-          eius vero accusamus expedita eaque labore non ad excepturi! Eius
-        </p>
+        <p>{section?.description}</p>
       </div>
       <div
         className="InputSection-input"
         data-aos="fade-up"
-        data-aos-duration="1000"
+        data-aos-duration="3000"
       >
-        <h6>Email</h6>
+        <h6>{section?.label}</h6>
         <Input
           icon={<i class="fa-solid fa-at"></i>}
           variant="unStyled"
-          placeholder="Your email"
+          placeholder={section?.placeholder}
+          onChange={handleSupplierData}
+          name={section?.InputName}
+          // value={supplierData[section?.InputName || 'email']}
         />
       </div>
       <div
         className="InputSection-continue"
         data-aos="fade-up"
-        data-aos-duration="1000"
+        data-aos-duration="3000"
       >
         <Button
           color="dark"
           radius="xl"
           uppercase
-          onClick={() => setShow(!show)}
+          // disabled={supplierData[section?.InputName || 'email'] ? false : true}
+          onClick={handleContinue}
         >
           Continue
         </Button>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
