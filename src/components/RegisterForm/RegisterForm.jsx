@@ -27,6 +27,10 @@ const RegisterForm = () => {
   const sectionForward = () => {
     setSection(questions[section.nextId - 1]);
   };
+
+  const sectionBackward = () => {
+    setSection(questions[section.prevId - 1]);
+  };
   console.log(section);
 
   const handleSupplierData = (event) => {
@@ -47,6 +51,7 @@ const RegisterForm = () => {
               <InputSection
                 section={section}
                 sectionForward={sectionForward}
+                sectionBackward={sectionBackward}
                 handleSupplierData={handleSupplierData}
                 supplierData={supplierData}
               />
