@@ -13,10 +13,18 @@ const Footer = () => {
         <div className="footer-footerHead ">
           <div className="container">
             <div className="row">
-              <div className="col-sm-12 col-lg-4 footer-logo">
+              <div
+                className="col-sm-12 col-lg-4 footer-logo"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
                 <img src={logo} alt="helloDello" />
               </div>
-              <div className="col-sm-12 col-lg-8 footer-nav">
+              <div
+                className="col-sm-12 col-lg-8 footer-nav"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
                 <p>Contact Us</p>
                 <p>Privacy Policy</p>
                 <p>Return & Exchange</p>
@@ -28,9 +36,11 @@ const Footer = () => {
         <hr />
         <div className="footer-middle container">
           <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-6 footer-aboutUs">
-              <h5 className="mb-4">ABOUT US</h5>
-              <p>
+            <div className="col-sm-12 col-md-12 col-lg-6 footer-aboutUs getToCenter">
+              <h5 className="mb-4" data-aos="fade-up" data-aos-duration="1000">
+                ABOUT US
+              </h5>
+              <p data-aos="fade-up" data-aos-duration="2000">
                 HelloDello™ are an upcoming world class fashion & lifestyle
                 e-commerce platform for all kinds of creative designers and
                 manufacturers of premium fashion and lifestyle products, with an
@@ -42,21 +52,44 @@ const Footer = () => {
                 products and smart devices.
               </p>
             </div>
-            <div className="col-sm-12 col-md-6 col-lg-3">
-              <h5 className="mb-4 mt-sm-4">CATEGORIES</h5>
-              <p>Women</p>
-              <p>Men</p>
-              <p>Kids</p>
-              <p>Home & Living</p>
+            <div className="col-sm-12 col-md-6 col-lg-3 getToCenter">
+              <h5
+                className="mb-4 mt-sm-4"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                CATEGORIES
+              </h5>
+              <p data-aos="fade-up" data-aos-duration="1000">
+                Women
+              </p>
+              <p data-aos="fade-up" data-aos-duration="1000">
+                Men
+              </p>
+              <p data-aos="fade-up" data-aos-duration="1000">
+                Kids
+              </p>
+              <p data-aos="fade-up" data-aos-duration="1000">
+                Home & Living
+              </p>
             </div>
-            <div className="col-sm-12 col-md-6 col-lg-3 mt-md-5">
-              <p>All Kind of Fashion Accessories & Essentials</p>
-              <p>Apparel Industry Services</p>
-              <p>Smart Electronic Technologies & Devices</p>
+            <div className="col-sm-12 col-md-6 col-lg-3 mt-md-5 getToCenter">
+              <p data-aos="fade-up" data-aos-duration="1000">
+                All Kind of Fashion Accessories & Essentials
+              </p>
+              <p data-aos="fade-up" data-aos-duration="1000">
+                Apparel Industry Services
+              </p>
+              <p data-aos="fade-up" data-aos-duration="1000">
+                Smart Electronic Technologies & Devices
+              </p>
             </div>
           </div>
         </div>
-        <div className="footer-socialMediaIcon">
+        <div
+          className="footer-socialMediaIcon"
+          
+        >
           <img src={facebook} alt="facebook" />
           <img src={instagram} alt="instagram" />
           <img src={pinterest} alt="pinterest" />
