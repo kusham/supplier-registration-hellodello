@@ -58,15 +58,15 @@ const RegisterForm = ({handleCloseModal}) => {
     <div className="RegisterForm-container container">
       <TransitionGroup>
         <CSSTransition key={section.id} timeout={1}>
-          <div className="row">
+          <div className="row g-5">
             <div
-              className="col-6"
+              className="col-sm-12 col-lg-6 RegisterForm-image"
               data-aos="fade-down"
               data-aos-duration="2000"
             >
               <img src={section.image} alt="image1" />
             </div>
-            <div className="col-6 RegisterForm-inputSection">
+            <div className="col-sm-12 col-lg-6 RegisterForm-inputSection">
               <InputSection
                 section={section}
                 sectionForward={sectionForward}

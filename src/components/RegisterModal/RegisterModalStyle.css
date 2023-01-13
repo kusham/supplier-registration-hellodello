@@ -1,27 +1,63 @@
 .RegisterModal-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: yellow; */
-    height: 87vh;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: yellow; */
+  height: 87vh;
 }
 .ModalTitle-container {
-    display: flex;
-    gap:1rem
+  display: flex;
+  gap: 1rem;
 }
-.ModalTitle-container h1{
-    font-family: 'Lobster', cursive;
-    font-style: italic;
+.ModalTitle-container h1 {
+  font-family: "Lobster", cursive;
+  font-style: italic;
 }
- 
 
-.blur {
+.blur1 {
   position: absolute;
   width: 25rem;
   height: 15rem;
   border-radius: 50%;
-  background:linear-gradient(rgb(230, 86, 76), rgb(115, 115, 240));
+  top: 2%;
+  right: 0;
+  background: linear-gradient(rgb(230, 86, 76), rgb(115, 115, 240));
   filter: blur(120px);
   z-index: -1;
 }
+
+.blur2 {
+  position: absolute;
+  width: 25rem;
+  height: 15rem;
+  border-radius: 50%;
+  top: 36%;
+  left: -8rem;
+  background: linear-gradient(rgb(230, 86, 76), rgb(115, 115, 240));
+  filter: blur(120px);
+  z-index: -1;
+}
+
+@media screen and (max-width: 850px) {
+  .blur1 {
+    top: 96%;
+    right: 0;
+  }
+
+  .blur2 {
+    top: 36%;
+    left: -8rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+    .blur1 {
+      top: 96%;
+      right: 0;
+    }
+  
+    .blur2 {
+      top: 36%;
+      left: -23rem;
+    }
+  }

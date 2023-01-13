@@ -16,8 +16,8 @@ const RegisterModal = ({ openRegistration, handleCloseModal }) => {
       title={<ModalTitle />}
     >
       <div className="RegisterModal-container">
-        <div className="blur" style={{ top: "2%", right: "0" }}></div>
-        <div className="blur" style={{ top: "36%", left: "-8rem" }}></div>
+        <div className="blur1" ></div>
+        <div className="blur2"></div>
         <RegisterForm handleCloseModal={handleCloseModal} />
       </div>
     </Modal>
