@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./RegisterSectionStyle.css";
 import twoGirls from "../../Resources/Images/two-girls.png";
+import RegisterModal from "../RegisterModal/RegisterModal";
 
-const RegisterSection = ({ setOpenRegistration }) => {
+const RegisterSection = () => {
+  const [openRegistration, setOpenRegistration] = useState(false);
+
+  const handleCloseModal =()=> {
+    setOpenRegistration(false)
+  }
+
   return (
     <div>
       <div className="container mt-5">
@@ -35,6 +42,10 @@ const RegisterSection = ({ setOpenRegistration }) => {
           </div>
         </div>
       </div>
+      <RegisterModal
+        openRegistration={openRegistration}
+        handleCloseModal={handleCloseModal}
+      />
     </div>
   );
 };

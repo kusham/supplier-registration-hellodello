@@ -65,7 +65,7 @@ const InputSection = ({
                 ? false
                 : true
             }
-            onClick={sectionForward}
+            onClick={()=>sectionForward(section?.InputName)}
           >
             Continue
           </Button>

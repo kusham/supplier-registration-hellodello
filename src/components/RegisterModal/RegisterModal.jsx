@@ -4,13 +4,13 @@ import './RegisterModalStyle.css'
 import RegisterForm from '../RegisterForm/RegisterForm';
 import ModalTitle from './ModalTitle';
 
-const RegisterModal = ({openRegistration, setOpenRegistration}) => {
+const RegisterModal = ({openRegistration, handleCloseModal}) => {
     
   return (
     
     <Modal
     opened={openRegistration}
-    onClose={() => setOpenRegistration(false)}
+    onClose={handleCloseModal}
     transition="scale"
     transitionDuration={1600}
     transitionTimingFunction="ease"
@@ -18,7 +18,7 @@ const RegisterModal = ({openRegistration, setOpenRegistration}) => {
     title={<ModalTitle />}
   >
 <div className='RegisterModal-container'>
-  <RegisterForm />
+  <RegisterForm handleCloseModal={handleCloseModal}/>
 </div>
   </Modal>
         
