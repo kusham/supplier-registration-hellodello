@@ -8,7 +8,7 @@ import image_5 from "../../Resources/Images/5.jpg";
 export const slideItem = [
     {
       active: true,
-      image: image_2,
+      image: image_3,
       alt: "banner one",
       title: "First slide Title",
       description:
@@ -16,9 +16,9 @@ export const slideItem = [
     },
     {
         active: false,
-        image: image_3,
+        image: image_2,
         alt: "banner two",
-        title: "second slide Title",
+        title: "Second slide Title",
         description:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid quam porro architecto illum voluptatem dolorem quidem ratione labore, vero a impedit atque velit numquam natus nam eum quaerat possimus dicta.",
       },

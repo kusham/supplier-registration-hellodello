@@ -1,11 +1,32 @@
 import React from "react";
 import { slideItem } from "../../Resources/Data/Slides";
 import "./ImageSlideShowStyle.css";
+import { Carousel } from "@mantine/carousel";
+import { useRef } from "react";
+import Autoplay from "embla-carousel-autoplay";
 
 const ImageSlideShow = () => {
+  const autoplay = useRef(Autoplay({ delay: 3000 }));
   return (
     <>
-      <div
+      <Carousel mx="auto" withIndicators loop plugins={[autoplay.current]} styles={{
+        indicator : {
+          width:30,
+          background: "black"
+        },
+        
+      }}>
+        {slideItem.map((slide, i) => (
+          <Carousel.Slide key={i} className="ImageSlideShow-slide">
+            <img className="d-block w-100" src={slide.image} alt={slide.alt} />
+            <div className="carousel-caption d-none d-md-block">
+              <h1>{slide.title}</h1>
+              <p>{slide.description}</p>
+            </div>
+          </Carousel.Slide>
+        ))}
+      </Carousel>
+      {/* <div
         id="carouselExampleIndicators"
         className="carousel slide xyz"
         data-ride="carousel"
@@ -54,18 +75,6 @@ const ImageSlideShow = () => {
             aria-hidden="true"
           ></span>
         </a>
-      </div>
-      {/* <div className="Navbar-carousel-indicators">
-        <svg height="100" width="100">
-          <circle
-            cx="10"
-            cy="10"
-            r="10"
-            fill="red"
-          />
-          Sorry, your browser does not support inline SVG.
-        </svg>
-        <i class="fa-solid fa-circle"></i>
       </div> */}
     </>
   );

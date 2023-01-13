@@ -1,10 +1,11 @@
 .ImageSlideShow-slide {
-    height: auto;
-    /* width: 100%; */
+  height: auto;
+  padding: 30px;
+  /* width: 100%; */
 }
-.ImageSlideShow-slide img{
-    height: auto;
-    object-fit: contain;
+.ImageSlideShow-slide img {
+  height: auto;
+  object-fit: contain;
 }
 
 /* .ImageSlideShow-slide h1,p{
@@ -12,33 +13,24 @@
 } */
 
 @media screen and (min-width: 868px) {
-    .ImageSlideShow-slide {
-        height: 50rem;
-    }
-   
+  .ImageSlideShow-slide {
+    height: 50rem;
   }
-.carousel-item {
-    background-color: aqua;
 }
 
-.Navbar-carousel-indicators {
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    padding-top: 15px;
-}
-.carousel-control-next-icon {
-    /* background-color: black; */
-    height: 50px;
-    width: 50px;
-    /* border-radius: 50%;
-    padding: 10px; */
-} 
+@media screen and (max-width: 700px) {
+    .ImageSlideShow-slide {
+     padding: 10px;
+    }
+  }
 
-.carousel-control-prev-icon {
-    /* background-color: black; */
-    height: 50px;
-    width: 50px;
-    /* border-radius: 50%;
-    padding: 10px; */
-}
+@media screen and (min-width: 1200px) {
+    .carousel-caption h1 {
+      font-size: 10rem;
+    }
+    
+    .carousel-caption p {
+      font-size: 1rem;
+    }
+    
+  }
