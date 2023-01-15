@@ -6,7 +6,13 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { checkEmail, saveSupplier } from "../../apis/supplier";
 import Notifications from "../notification/Notifications";
 
-const RegisterForm = ({ handleCloseModal }) => {
+const RegisterForm = ({
+  handleCloseModal,
+  setIsSucceed,
+  isSucceed,
+  isError,
+  setIsError,
+}) => {
   const [section, setSection] = useState(questions[0]);
   const [supplierData, setSupplierData] = useState({
     brandName: "",
@@ -25,8 +31,6 @@ const RegisterForm = ({ handleCloseModal }) => {
     message: "",
   });
   const [isUsed, setIsUsed] = useState(false);
-  const [isSucceed, setIsSucceed] = useState(true);
-  const [isError, setIsError] = useState(false);
 
   const sectionForward = async (name) => {
     if (name === "email" || name === "brandName") {
@@ -48,7 +52,9 @@ const RegisterForm = ({ handleCloseModal }) => {
     // submit data
     const data = await saveSupplier(supplierData);
     if (data.success) {
-      handleCloseModal();
+      setIsSucceed(true);
+    } else {
+      setIsError(true);
     }
   };
 
@@ -85,7 +91,10 @@ const RegisterForm = ({ handleCloseModal }) => {
           </CSSTransition>
         </TransitionGroup>
       ) : (
-        <Notifications />
+        <Notifications
+          isSucceed={isSucceed}
+          handleCloseModal={handleCloseModal}
+        />
       )}
     </div>
   );
