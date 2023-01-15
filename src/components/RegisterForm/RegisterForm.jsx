@@ -4,8 +4,9 @@ import { questions } from "../../Resources/Data/SupplierQuestions";
 import InputSection from "./InputSection";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { checkEmail, saveSupplier } from "../../apis/supplier";
+import Notifications from "../notification/Notifications";
 
-const RegisterForm = ({handleCloseModal}) => {
+const RegisterForm = ({ handleCloseModal }) => {
   const [section, setSection] = useState(questions[0]);
   const [supplierData, setSupplierData] = useState({
     brandName: "",
@@ -24,15 +25,18 @@ const RegisterForm = ({handleCloseModal}) => {
     message: "",
   });
   const [isUsed, setIsUsed] = useState(false);
+  const [isSucceed, setIsSucceed] = useState(true);
+  const [isError, setIsError] = useState(false);
+
   const sectionForward = async (name) => {
     if (name === "email" || name === "brandName") {
       if (await checkEmail(supplierData[name])) {
         setSection(questions[section.nextId - 1]);
-      }else {
+      } else {
         setIsUsed(true);
       }
     } else {
-    setSection(questions[section.nextId - 1]);
+      setSection(questions[section.nextId - 1]);
     }
   };
 
@@ -56,29 +60,33 @@ const RegisterForm = ({handleCloseModal}) => {
   };
   return (
     <div className="RegisterForm-container container">
-      <TransitionGroup>
-        <CSSTransition key={section.id} timeout={1}>
-          <div className="row g-5">
-            <div
-              className="col-sm-12 col-lg-6 RegisterForm-image"
-              data-aos="fade-down"
-              data-aos-duration="2000"
-            >
-              <img src={section.image} alt="image1" />
+      {!isError && !isSucceed ? (
+        <TransitionGroup>
+          <CSSTransition key={section.id} timeout={1}>
+            <div className="row g-5">
+              <div
+                className="col-sm-12 col-lg-6 RegisterForm-image"
+                data-aos="fade-down"
+                data-aos-duration="2000"
+              >
+                <img src={section.image} alt="image1" />
+              </div>
+              <div className="col-sm-12 col-lg-6 RegisterForm-inputSection">
+                <InputSection
+                  section={section}
+                  sectionForward={sectionForward}
+                  handleSubmit={handleSubmit}
+                  sectionBackward={sectionBackward}
+                  handleSupplierData={handleSupplierData}
+                  supplierData={supplierData}
+                />
+              </div>
             </div>
-            <div className="col-sm-12 col-lg-6 RegisterForm-inputSection">
-              <InputSection
-                section={section}
-                sectionForward={sectionForward}
-                handleSubmit={handleSubmit}
-                sectionBackward={sectionBackward}
-                handleSupplierData={handleSupplierData}
-                supplierData={supplierData}
-              />
-            </div>
-          </div>
-        </CSSTransition>
-      </TransitionGroup>
+          </CSSTransition>
+        </TransitionGroup>
+      ) : (
+        <Notifications />
+      )}
     </div>
   );
 };
