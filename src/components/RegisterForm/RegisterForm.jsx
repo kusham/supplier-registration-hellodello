@@ -64,6 +64,12 @@ const RegisterForm = ({
       [event.target.name]: event.target.value,
     });
   };
+  const handleDatePicker = (date) => {
+    setSupplierData({
+      ...supplierData,
+      establishmentYear: date
+    });
+  };
   return (
     <div className="RegisterForm-container container">
       {!isError && !isSucceed ? (
@@ -85,6 +91,7 @@ const RegisterForm = ({
                   sectionBackward={sectionBackward}
                   handleSupplierData={handleSupplierData}
                   supplierData={supplierData}
+                  handleDatePicker={handleDatePicker}
                 />
               </div>
             </div>

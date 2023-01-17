@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Input } from "@mantine/core";
 import { Button } from "@mantine/core";
 import { DatePicker } from "@mantine/dates";
@@ -10,7 +10,13 @@ const InputSection = ({
   handleSupplierData,
   supplierData,
   handleSubmit,
+  handleDatePicker
 }) => {
+  const [dateValue, setDateValue] = useState("");
+  useEffect(() => {
+   handleDatePicker(dateValue)
+  }, [dateValue])
+  
   return (
     <div
       className="InputSection-container"
@@ -38,7 +44,8 @@ const InputSection = ({
             placeholder={section?.placeholder}
             icon={section?.icon}
             variant="unStyled"
-            // onChange={handleSupplierData}
+            onChange={setDateValue}
+            value={dateValue}
           />
         ) : (
           <Input
