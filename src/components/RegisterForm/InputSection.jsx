@@ -1,6 +1,7 @@
 import React from "react";
 import { Input } from "@mantine/core";
 import { Button } from "@mantine/core";
+import { DatePicker } from "@mantine/dates";
 
 const InputSection = ({
   section,
@@ -8,9 +9,8 @@ const InputSection = ({
   sectionBackward,
   handleSupplierData,
   supplierData,
-  handleSubmit
+  handleSubmit,
 }) => {
-
   return (
     <div
       className="InputSection-container"
@@ -33,14 +33,23 @@ const InputSection = ({
         data-aos-duration="3000"
       >
         <h6>{section?.label}</h6>
-        <Input
-          icon={section?.icon}
-          variant="unStyled"
-          placeholder={section?.placeholder}
-          onChange={handleSupplierData}
-          name={section?.InputName}
-          value={supplierData[section?.InputName || "email"]}
-        />
+        {section?.InputName === "establishmentYear" ? (
+          <DatePicker
+            placeholder={section?.placeholder}
+            icon={section?.icon}
+            variant="unStyled"
+            // onChange={handleSupplierData}
+          />
+        ) : (
+          <Input
+            icon={section?.icon}
+            variant="unStyled"
+            placeholder={section?.placeholder}
+            onChange={handleSupplierData}
+            name={section?.InputName}
+            value={supplierData[section?.InputName || "email"]}
+          />
+        )}
       </div>
       <div
         className="InputSection-continue"
@@ -65,17 +74,12 @@ const InputSection = ({
                 ? false
                 : true
             }
-            onClick={()=>sectionForward(section?.InputName)}
+            onClick={() => sectionForward(section?.InputName)}
           >
             Continue
           </Button>
         ) : (
-          <Button
-            color="green"
-            radius="xl"
-            uppercase
-            onClick={handleSubmit}
-          >
+          <Button color="green" radius="xl" uppercase onClick={handleSubmit}>
             Submit
           </Button>
         )}
