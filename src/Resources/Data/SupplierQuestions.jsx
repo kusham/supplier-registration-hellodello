@@ -37,8 +37,8 @@ export const questions = [
   {
     id: 3,
     title: "Company Establishment",
-    label: "Year of Establishment:",
-    placeholder: "Select year",
+    label: "Date of Establishment:",
+    placeholder: "Select Date",
     InputName: "establishmentYear",
     image: image3,
     icon: <i className="fa fa-calendar-days"></i>,
