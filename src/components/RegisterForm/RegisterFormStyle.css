@@ -46,3 +46,10 @@ color: rgb(0, 0, 0, 0.6);
   
 }
 
+.InputSection-error-message {
+  color: red;
+  font-size: 13px;
+  /* font-weight: 600; */
+  font-family: 'Quicksand', sans-serif;
+
+}
