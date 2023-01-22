@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "http://localhost:8070" });
+const API = axios.create({ baseURL: "https://hello-dello.onrender.com" });
 
 export const checkEmail = async (email) => {
   try {
