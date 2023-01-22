@@ -10,13 +10,14 @@ const InputSection = ({
   handleSupplierData,
   supplierData,
   handleSubmit,
-  handleDatePicker
+  handleDatePicker,
+  isUsed,
 }) => {
   const [dateValue, setDateValue] = useState("");
   useEffect(() => {
-   handleDatePicker(dateValue)
-  }, [dateValue])
-  
+    handleDatePicker(dateValue);
+  }, [dateValue]);
+
   return (
     <div
       className="InputSection-container"
@@ -58,6 +59,13 @@ const InputSection = ({
           />
         )}
       </div>
+      {isUsed && (
+        <p className="InputSection-error-message">
+          This {section?.label.slice(0, section.label.length - 1)} is already
+          being used
+        </p>
+      )}
+
       <div
         className="InputSection-continue"
         data-aos="fade-up"

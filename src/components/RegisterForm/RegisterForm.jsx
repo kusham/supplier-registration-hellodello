@@ -3,7 +3,7 @@ import "./RegisterFormStyle.css";
 import { questions } from "../../Resources/Data/SupplierQuestions";
 import InputSection from "./InputSection";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import { checkEmail, saveSupplier } from "../../apis/supplier";
+import { checkBrandName, checkEmail, saveSupplier } from "../../apis/supplier";
 import Notifications from "../notification/Notifications";
 
 const RegisterForm = ({
@@ -33,12 +33,14 @@ const RegisterForm = ({
   const [isUsed, setIsUsed] = useState(false);
 
   const sectionForward = async (name) => {
-    if (name === "email" || name === "brandName") {
-      if (await checkEmail(supplierData[name])) {
-        setSection(questions[section.nextId - 1]);
-      } else {
-        setIsUsed(true);
-      }
+    if (
+      (name === "email" && (await checkEmail(supplierData[name]))) ||
+      (name === "brandName" && (await checkBrandName(supplierData[name])))
+    ) {
+      setSection(questions[section.nextId - 1]);
+      // setIsUsed(false);
+    } else if (name === "email" || name === "brandName") {
+      setIsUsed(true);
     } else {
       setSection(questions[section.nextId - 1]);
     }
@@ -63,11 +65,12 @@ const RegisterForm = ({
       ...supplierData,
       [event.target.name]: event.target.value,
     });
+    setIsUsed(false);
   };
   const handleDatePicker = (date) => {
     setSupplierData({
       ...supplierData,
-      establishmentYear: date
+      establishmentYear: date,
     });
   };
   return (
@@ -92,6 +95,7 @@ const RegisterForm = ({
                   handleSupplierData={handleSupplierData}
                   supplierData={supplierData}
                   handleDatePicker={handleDatePicker}
+                  isUsed={isUsed}
                 />
               </div>
             </div>
