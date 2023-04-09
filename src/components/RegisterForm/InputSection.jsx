@@ -7,8 +7,8 @@ const InputSection = ({
   section,
   sectionForward,
   sectionBackward,
-  handleSupplierData,
-  supplierData,
+  handleData,
+  data,
   handleSubmit,
   handleDatePicker,
   isUsed,
@@ -53,9 +53,9 @@ const InputSection = ({
             icon={section?.icon}
             variant="unStyled"
             placeholder={section?.placeholder}
-            onChange={handleSupplierData}
+            onChange={handleData}
             name={section?.InputName}
-            value={supplierData[section?.InputName || "email"]}
+            value={data[section?.InputName || "email"]}
           />
         )}
       </div>
@@ -85,7 +85,7 @@ const InputSection = ({
             radius="xl"
             uppercase
             disabled={
-              supplierData[section?.InputName || "email"] || !section?.required
+              data[section?.InputName || "email"] || !section?.required
                 ? false
                 : true
             }

@@ -21,7 +21,7 @@
     border-radius: 50px;
     padding: 10px 30px;
     border: none;
-    font-family: 'Prosto One', cursive;
+    font-family: 'Inter', sans-serif;
     color: aliceblue;
 }
 .RegisterSection-text button:hover{
@@ -33,4 +33,13 @@
 .RegisterSection-image {
   display: flex;
   justify-content: center;
+}
+
+.enrollment-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.enrollment-buttons button {
+  width: 200px;
 }

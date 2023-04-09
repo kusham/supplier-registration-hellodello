@@ -38,6 +38,32 @@
   z-index: -1;
 }
 
+
+.blur3 {
+  position: absolute;
+  width: 25rem;
+  height: 15rem;
+  border-radius: 50%;
+  top: 2%;
+  right: 0;
+  background: linear-gradient(rgb(145, 230, 76), rgb(2, 75, 24));
+  filter: blur(120px);
+  z-index: -1;
+}
+
+.blur4 {
+  position: absolute;
+  width: 25rem;
+  height: 15rem;
+  border-radius: 50%;
+  top: 36%;
+  left: -8rem;
+  background: linear-gradient(rgb(145, 230, 76), rgb(2, 75, 24));
+  filter: blur(120px);
+  z-index: -1;
+}
+
+
 @media screen and (max-width: 850px) {
   .blur1 {
     top: 96%;
